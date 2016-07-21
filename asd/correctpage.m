@@ -162,12 +162,29 @@
         
         else{
             NSDate *dd = [NSDate date];
-            NSDate *time = [NSDate dateWithTimeInterval:8*60*60 sinceDate:dd];
-            NSString* createtime=[[NSString stringWithFormat:@"%@", time] substringWithRange:(NSRange){0, 16}];
+            NSDate *time = [NSDate dateWithTimeInterval:0 sinceDate:dd];
+            
+            NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"yyy-MM-dd HH:mm"];
+            NSString *createtime=[formatter stringFromDate:time];
+            
+            
+            //NSString* createtime=[[NSString stringWithFormat:@"%@", time] substringWithRange:(NSRange){0, 16}];
             NSMutableDictionary* textcontent=[[NSMutableDictionary alloc]init];
             [textcontent setObject:self.text1.text forKey:@"title"];
             [textcontent setObject:self.textview2.text forKey:@"detail"];
             [textcontent setObject: createtime forKey:@"createtime"];
+            
+           
+            
+            
+          
+            
+            
+            
+            
+            
+            
             int importancce = 0;
             if([self.imp isEqualToString:@"imp1"]){
                 importancce = 0;

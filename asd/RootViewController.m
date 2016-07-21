@@ -181,7 +181,7 @@
     [cell.textLabel setText:[(self.content[indexPath.section][indexPath.row]) objectForKey:@"title"]];
     //[cell.detailTextLabel setText:[self.content[indexPath.section][indexPath.row] objectForKey:@"detail"]];
     //[cell.detailTextLabel setText:[self.content[indexPath.section]indexPathp[indexPath.row] objectFor]]
-    [cell.detailTextLabel setTextColor:[UIColor redColor]];
+    [cell.detailTextLabel setTextColor:rgb(133,127,127)];
    
     [cell.detailTextLabel setText:[self.content[indexPath.section][indexPath.row] objectForKey:@"createtime"]];
 
